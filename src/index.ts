@@ -16,14 +16,14 @@ const defaultOptions = {
   remote: 'origin',
   token: '',
   message: 'Initial commit',
-  force: [argv.force, false].find ( _.isBoolean ),
-  private: [argv.private, false].find ( _.isBoolean ),
+  force: !![argv.force, false].find ( _.isBoolean ),
+  private: !![argv.private, false].find ( _.isBoolean ),
   ssh: _.isBoolean ( argv.https ) ? !argv.https : true
 };
 
-function githubPublish ( options? ) {
+function githubPublish ( customOptions?: Partial<typeof defaultOptions> ) {
 
-  options = Object.assign ( {}, defaultOptions, options );
+  const options = Object.assign ( {}, defaultOptions, customOptions );
 
   return {
     description: 'Publish to GitHub',
