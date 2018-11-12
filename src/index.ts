@@ -45,4 +45,4 @@ function githubPublish ( customOptions?: Partial<typeof defaultOptions> ) {
 
 /* EXPORT */
 
-export = Object.assign ( githubPublish, { default: githubPublish } );
+export default githubPublish;
