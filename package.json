@@ -29,15 +29,15 @@
     "publish"
   ],
   "dependencies": {
-    "autogit-plugin-push": "^1.0.2",
+    "@types/node": "^10.12.8",
     "autogit-plugin-github-publish": "^1.0.2",
     "autogit-plugin-github-sync-description": "^1.0.2",
     "autogit-plugin-github-sync-keywords": "^1.0.2",
+    "autogit-plugin-push": "^1.0.2",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
     "rimraf": "^2.6.0",
     "typescript": "^3.0.3",
     "typescript-transform-export-interop": "^1.0.1"
